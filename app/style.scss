@@ -1,0 +1,69 @@
+body {
+	background-color: #F4F4F4;
+}
+  
+.switch {
+	width: 180px;
+	height: 55px;
+	position: relative;
+	margin: auto;
+	margin-top: 100px;
+	
+	input {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  top: 0; 
+	  right: 0; 
+	  bottom: 0; 
+	  left: 0;
+	  opacity: 0;
+	  z-index: 100;
+	  
+	  &:checked {
+		content: "";
+		
+		~ label i {
+		  left: 63%;
+		  background-color: rgba(255, 255, 255, 1.0);
+		}
+		
+		~ label {
+		  background-color: #70a84c;
+		}
+		
+		~ label .title {
+		  display: inline;
+		}
+	  }
+	  
+	  &:hover {
+		cursor: pointer;
+	  }
+	}
+	
+	label {
+	  display: block;
+	  position: relative;
+	  background-color: rgba(176, 77, 53, 1.0);
+	  border-radius: 30px;
+	  width: 80%;
+	  height: 100%;
+	}
+	
+	i {
+	  background-color: rgba(255, 255, 255, 1.0);
+	}
+}
+  
+i {
+	display: block;
+	position: absolute;
+	border-radius: inherit;
+	top: 5px;
+	left: 8px;
+	height: 45px;
+	width: 45px;
+	z-index : 2;
+	transition: all .5s ease;
+}  
